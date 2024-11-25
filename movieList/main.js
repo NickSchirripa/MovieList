@@ -1,5 +1,4 @@
 import "./style.css";
-//api key http://www.omdbapi.com/?i=tt3896198&apikey=4c03152d
 
 const button = document.getElementById("btn");
 const feed = document.getElementById("feed");
@@ -15,7 +14,15 @@ button.addEventListener("click", async () => {
   let movieHTML = ``;
 
   for (let i = 0; i < data.Search.length; i++) {
-    movieHTML += `<p>${data.Search[i].Title}  ${data.Search[i].Year}</p>`;
+    movieHTML += `
+    <div class= "render">
+    <div><img class="image" src=${data.Search[i].Poster}/></div>
+    <div>
+  <div><h1 class="title">${data.Search[i].Title}<h1></div>
+    <p>${data.Search[i].Year} ${data.Search[i].Type}</p>
+    <button class="addList">Add to list</button>
+    </div>
+    </div>`;
   }
 
   feed.innerHTML = movieHTML;
