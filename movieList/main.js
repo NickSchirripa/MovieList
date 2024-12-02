@@ -2,6 +2,7 @@ import "./style.css";
 
 const button = document.getElementById("btn");
 const feed = document.getElementById("feed");
+const moviesAdded = document.getElementById("moviesAdded");
 
 button.addEventListener("click", async () => {
   const input = document.getElementById("movieName").value;
@@ -20,10 +21,16 @@ button.addEventListener("click", async () => {
     <div>
   <div><h1 class="title">${data.Search[i].Title}<h1></div>
     <p>${data.Search[i].Year} ${data.Search[i].Type}</p>
-    <button class="addList">Add to list</button>
+    <button class="addList" id ="${data.Search[i].Title}">Add to list</button>
     </div>
     </div>`;
   }
 
   feed.innerHTML = movieHTML;
+  document.querySelectorAll(".addList").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const movieList = e.target.id;
+      console.log(movieList);
+    });
+  });
 });

@@ -5,4 +5,55 @@
 .render{
   display: flex;
   flex-direction: row;
+  margin: 1em 1em;
+  gap: 1em;
+}
+
+body{
+  background-color: #AFE3C0;
+  align-items: center;
+}
+input{
+  display: block;
+  margin:auto;
+  margin-bottom: 1em;
+
+}
+
+.btnWrapper{
+  display:flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: 1em auto;
+  gap: 1em;
+  
+}
+
+a, button {
+  display: inline-block;
+  padding: 10px 19px;
+  border-radius: 4px;
+  background-color:#597fc5;
+  font-size: 1em;
+  cursor: pointer;
+  color: #EEE5E9;
+  border: none;
+font-weight: bold;
+  text-decoration: none;
+}
+
+p {
+  font-weight: bold;
+  color:#0D160B;
+}
+
+button:active, a:active {
+  transform: scale(0.95); 
+  background-color: #F76F8E;  
+  color: #0D160B;
+}
+
+button:hover, a:hover {
+  background-color:#F76F8E;
+  color: #0D160B;
 }

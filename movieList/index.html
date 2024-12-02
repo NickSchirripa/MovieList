@@ -2,16 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js" defer></script>
-    <title>Movie List</title>
+    <title>Movie Search</title>
   </head>
   <body>
     <div class = "search-wrapper">
-      <label for="search">Search Movies</label>
       <input type = "text" id="movieName" placeholder="Movie Name" >
-      <button id="btn">Search</button>
+      <div class = "btnWrapper">
+      <button id="btn" >Search</button>
+      <a href="list.html">Movie List</a>
+      </div>
     </div>
     <div id="feed"></div>
     
