@@ -6,27 +6,51 @@
   display: flex;
   flex-direction: row;
   margin: 1em 1em;
+  padding: .35em;
   gap: 1em;
+  border: 1px, solid, #AFE3C0;
+  background-color:#F76F8E ;
+  border-radius: 5%;
+  font-size: .85em;
+  text-align: center;
+  
 }
 
 body{
   background-color: #AFE3C0;
   align-items: center;
 }
+
+.clay{
+  max-width: 300px;
+
+
+}
+
+.clayContainer{
+  text-align: center;
+
+}
+
 input{
   display: block;
-  margin:auto;
+  margin:0 auto;
   margin-bottom: 1em;
+  border: none;
+  border-radius: 2%;
 
 }
 
 .btnWrapper{
   display:flex;
-  justify-content: space-evenly;
-  width: 40%;
+  justify-content: center;
   margin: 1em auto;
   gap: 1em;
   
+}
+.image{
+  max-width: 180px;
+  border-radius: 5%;
 }
 
 a, button {
@@ -49,11 +73,12 @@ p {
 
 button:active, a:active {
   transform: scale(0.95); 
-  background-color: #F76F8E;  
+  background-color: #AFE3C0;  
+  background-color: ;  
   color: #0D160B;
 }
 
 button:hover, a:hover {
-  background-color:#F76F8E;
+  background-color:#AFE3C0;
   color: #0D160B;
 }
