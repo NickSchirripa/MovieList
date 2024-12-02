@@ -2,6 +2,9 @@
   display:none;
 }
 
+
+
+
 .render{
   display: flex;
   flex-direction: row;
@@ -19,6 +22,7 @@
 body{
   background-color: #AFE3C0;
   align-items: center;
+  font-family: "DynaPuff", system-ui;;
 }
 
 .clay{
@@ -38,6 +42,7 @@ input{
   margin-bottom: 1em;
   border: none;
   border-radius: 2%;
+  font-family: "DynaPuff", system-ui;
 
 }
 
@@ -70,6 +75,7 @@ a, button {
   border: none;
 font-weight: bold;
   text-decoration: none;
+  font-family: "DynaPuff", system-ui;
 }
 
 
