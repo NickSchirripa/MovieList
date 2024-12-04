@@ -14,7 +14,7 @@
   border: 1px, solid, #AFE3C0;
   background-color:#F76F8E ;
   border-radius: 5%;
-  font-size: .85em;
+  font-size: .8em;
   text-align: center;
   
 }
@@ -33,9 +33,18 @@ body{
 }
 
 .clayContainer{
-  text-align: center;
 
-}
+  width: 300px;
+      height: 300px;
+      margin: 0px auto;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    
 
 input{
   display: block;
@@ -60,10 +69,7 @@ input{
 #btn:hover{
   background-color: #F76F8E;
 }
-.image{
-  max-width: 180px;
-  border-radius: 5%;
-}
+
 
 a, button {
   display: inline-block;
@@ -77,6 +83,11 @@ a, button {
 font-weight: bold;
   text-decoration: none;
   font-family: "DynaPuff", system-ui;
+}
+
+.image{
+  max-width: 180px;
+  border-radius: 5%;
 }
 
 

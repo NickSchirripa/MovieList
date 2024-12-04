@@ -3,9 +3,23 @@ import "./style.css";
 const button = document.getElementById("btn");
 const feed = document.getElementById("feed");
 const moviesAdded = document.getElementById("moviesAdded");
+const berry = document.getElementById("berry");
+let rotation = 0;
+
+function spinImage() {
+  if (rotation < 720) {
+    rotation += 15;
+    berry.style.transform = `rotate(${rotation}deg)`;
+    requestAnimationFrame(spinImage);
+  }
+}
 
 button.addEventListener("click", async () => {
+  rotation = 0;
   const input = document.getElementById("movieName").value;
+  if (input) {
+    spinImage();
+  }
   const response = await fetch(
     `http://www.omdbapi.com/?apikey=4c03152d&s=${input}`
   );
