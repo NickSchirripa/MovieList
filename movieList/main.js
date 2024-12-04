@@ -35,7 +35,9 @@ button.addEventListener("click", async () => {
     <div>
   <div><h1 class="title">${data.Search[i].Title}<h1></div>
     <p>${data.Search[i].Year} ${data.Search[i].Type}</p>
-    <button class="addList" id ="${data.Search[i].Title}">Add to list</button>
+    <button class="addList" data-movie='${JSON.stringify(
+      data.Search[i]
+    )}'>Add to list</button>
     </div>
     </div>`;
   }
@@ -43,7 +45,9 @@ button.addEventListener("click", async () => {
   feed.innerHTML = movieHTML;
   document.querySelectorAll(".addList").forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      const movieList = e.target.id;
+      const movieList = [];
+      const movieData = JSON.parse(e.target.getAttribute("data-movie"));
+      movieList.push(movieData);
       console.log(movieList);
     });
   });

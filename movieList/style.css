@@ -16,13 +16,20 @@
   border-radius: 5%;
   font-size: .8em;
   text-align: center;
+  align-items: center;
   
 }
 
 body{
+  margin: 0;
+  padding: 0;
   background-color: #AFE3C0;
   align-items: center;
   font-family: "DynaPuff", system-ui;;
+}
+
+h1{
+  margin: 0;
 }
 
 .clay{
