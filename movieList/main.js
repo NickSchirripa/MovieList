@@ -5,6 +5,7 @@ const feed = document.getElementById("feed");
 const moviesAdded = document.getElementById("moviesAdded");
 const berry = document.getElementById("berry");
 let rotation = 0;
+const movieList = [];
 
 function spinImage() {
   if (rotation < 720) {
@@ -24,7 +25,6 @@ button.addEventListener("click", async () => {
     `http://www.omdbapi.com/?apikey=4c03152d&s=${input}`
   );
   const data = await response.json();
-  console.log(data);
 
   let movieHTML = ``;
 
@@ -45,7 +45,6 @@ button.addEventListener("click", async () => {
   feed.innerHTML = movieHTML;
   document.querySelectorAll(".addList").forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      const movieList = [];
       const movieData = JSON.parse(e.target.getAttribute("data-movie"));
       movieList.push(movieData);
       console.log(movieList);
