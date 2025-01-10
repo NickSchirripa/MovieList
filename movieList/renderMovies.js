@@ -1,3 +1,6 @@
+
+import "./style.css";
+
 document.addEventListener("DOMContentLoaded", () => {
   const movieListContainer = document.getElementById("movieListContainer");
 
@@ -12,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   movieList.forEach((movie) => {
     const movieHTML = `
-      <div class="movie-item">
-        <div><img src="${movie.Poster}" alt="${movie.Title}" class="movie-poster"></div>
+      <div class="render">
+        <div><img class="image" src="${movie.Poster}" alt="${movie.Title}" class="movie-poster"></div>
         <div>
-          <h2>${movie.Title}</h2>
+          <h1 class="title">${movie.Title}</h1>
           <p>${movie.Year} - ${movie.Type}</p>
         </div>
       </div>
