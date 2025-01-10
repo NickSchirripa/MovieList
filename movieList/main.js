@@ -2,9 +2,8 @@ import "./style.css";
 
 const button = document.getElementById("btn");
 const feed = document.getElementById("feed");
-const moviesAdded = document.getElementById("moviesAdded");
 const berry = document.getElementById("berry");
-const test = document.getElementById("test")
+
 
 let rotation = 0;
 const movieList = [];
@@ -54,23 +53,13 @@ button.addEventListener("click", async () => {
   });
 });
 
-console.log(movieList)
+
 
 function renderMovieList() {
-test.innerHTML= ""
-  movieList.forEach((movie, index) => {
-    const movieHTML = `
-      <div class="movie-item">
-        <div><img class="image" src=${movie.Poster} alt=${movie.Title} /></div>
-        <div>
-          <h2>${movie.Title}</h2>
-          <p>${movie.Year} ${movie.Type}</p>
-          <button class="remove-btn" data-index=${index}>Remove</button>
-        </div>
-      </div>
-    `;
-    test.innerHTML += movieHTML;
-  });
+  console.log(movieList)
+  localStorage.setItem("movieList", JSON.stringify(movieList));
+
+  };
 
   document.querySelectorAll(".remove-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -80,5 +69,5 @@ test.innerHTML= ""
     });
   });
 
-}
+
 
